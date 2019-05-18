@@ -5,9 +5,7 @@ class SingleSmsController < BaseController
   end
 
   def send_sms
-    @phone_number = params[:phone_number]
-    @sender = params[:sender]
-    @message = params[:txtMessage]
+    
     #@schedule_date = params[:schedule_date]
     @cmbMessageType = params[:cmbMessageType]
     puts @cmbMessageType
