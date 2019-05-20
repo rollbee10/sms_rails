@@ -31,15 +31,7 @@ class SendersController < BaseController
     end
   end
 
-  def update
-    @sender = Sender.find(params[:id])
-
-    if @sender.update(sender_params)
-      redirect_to senders_path
-    else
-      render 'edit'
-    end
-  end
+ 
 
   def destroy
     @sender = Sender.find(params[:id])
