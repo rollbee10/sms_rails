@@ -37,8 +37,7 @@ class GroupSmsController < BaseController
             message_send_status = 0
             @message_str = "Fail: Message cannot send successfully."
           end
-          @message_id = @response.body.from(9).to(-2)
-          @message = Message.create(phone: contact.number, sender: @sender, message: message, message_id: @message_id, message_status: 'PENDING', user_id: current_user.id, message_send_status: message_send_status)
+          
         end
       end
     end
