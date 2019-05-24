@@ -17,6 +17,10 @@ class SingleSmsController < BaseController
       puts @content
     end
 
+    if @cmbMessageType == '1'
+      @content = @message.encode("UTF-16BE")
+      @coding = 8
+    end
 
     require 'net/http'
     content = "ازرع اسنانك بيوم واحد وبدون ألم مع ضمان مدى الحياة0551081988"
